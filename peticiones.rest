@@ -1,0 +1,85 @@
+GET http://localhost:3000/api/clientes
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEwLCJjYWR1Y2lkYWQiOjE2MDY0Njg1MDMsImlhdCI6MTYwNjQ2NzkwM30.gnj170AADAEO2QIbTLtqhcigB1SWFQXp3urmDBkqfvU
+
+
+###
+
+POST http://localhost:3000/api/clientes
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjEwLCJjYWR1Y2lkYWQiOjE2MDY0Njg1MDMsImlhdCI6MTYwNjQ2NzkwM30.gnj170AADAEO2QIbTLtqhcigB1SWFQXp3urmDBkqfvU
+
+
+{
+    "nombre":"Anita", 
+    "apellidos":"Mendoza",
+    "direccion":"cll falsa 124",
+    "email": "anao@ucm.es", 
+    "edad":"22",
+    "sexo":"f",
+    "fecha_inscripcion":"2020/02/11",
+    "cuota":"18.90",
+    "fecha_nacimiento":"1995/12/13",
+    "dni":"2143234"
+
+}
+
+###
+PUT http://localhost:3000/api/clientes
+Content-Type: application/json
+
+{
+    "clienteId":"8", 
+    "nombre":"Pepa Linda", 
+    "apellidos":"Lopez",
+    "direccion":"cll laguna 160",
+    "email": "pepa@ucm.es", 
+    "edad":"2",
+    "cuota":"18.90",
+    "dni":"123456"
+
+}
+
+###
+
+DELETE http://localhost:3000/api/clientes/9
+
+
+###
+
+GET http://localhost:3000/api/ejercicios
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjksImNhZHVjaWRhZCI6MTYwNjM5MTc4MiwiaWF0IjoxNjA2MzkxMTgyfQ.iZXw7kupMkY_GqEbhI1jAN99Eh1ywefsVX0gl_cbv5M
+
+###
+
+POST http://localhost:3000/api/ejercicios
+Content-Type: application/json
+
+{
+    "titulo":"Caminata", 
+    "duracion":"00:10:00",
+    "repeticiones":"10"
+
+}
+
+###
+GET http://localhost:3000/api/clientes/1/ejercicios
+
+###
+POST http://localhost:3000/api/usuarios/registro
+Content-Type: application/json
+
+{
+    "username":"Sandra", 
+    "password":"12345",
+    "email":"sandra@gmail.es"
+}
+
+
+###
+POST http://localhost:3000/api/usuarios/login
+Content-Type: application/json
+
+{
+    "password":"12345",
+    "email":"sandra@gmail.es"
+}

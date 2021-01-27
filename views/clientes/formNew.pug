@@ -1,0 +1,60 @@
+extends ../layout.pug
+
+block content
+    h2 Formulario
+    p Añade un nuevo cliente 🧘🏻‍♀️
+    form(method="POST", action="/clientes/create")
+        .form-group 
+            label Nombre
+            br
+            input.form-control(type="text", name="nombre")
+        
+        .form-group 
+            label Apellidos 
+            br
+            input.form-control(type="text", name="apellidos")
+
+        .form-group 
+            label Dirrección
+            br  
+            input.form-control(type="text", name="direccion")
+
+        .form-group 
+            label Email 
+            br
+            input.form-control(type="text", name="email")
+            
+        .form-group 
+            label Edad 
+            br
+            input.form-control(type="text", name="edad")
+
+        .form-group 
+            label Sexo
+            br
+            select.form-control(name="sexo")
+                option(value="m") Masculino 
+                option(value="f") Femenino
+
+        .form-group 
+            label Fecha de Inscripción
+            br
+            input.form-control(type="text", name="fecha_inscripcion")
+
+        .form-group 
+            label Cuota
+            br
+            input.form-control(type="text", name="cuota")
+
+        .form-group 
+            label Fecha de nacimiento
+            br
+            input.form-control(type="text", name="fecha_nacimiento")
+
+        .form-group 
+            label DNI
+            br
+            input.form-control(type="text", name="dni")
+
+        input.btn.btn-danger.btn-block(type="submit", value="Enviar")
+        

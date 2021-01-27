@@ -1,0 +1,40 @@
+extends ../layout.pug
+
+block content 
+    h1 Lista de Clientes 
+    table.table
+        thead   
+            tr
+                th Nombre
+                th Apellidos
+                th Dirección 
+                th Edad
+                th Email
+                th Sexo
+                th Fecha Inscripción 
+                th Cuota
+                th Fecha Nacimiento
+                th DNI 
+                th Acciones
+        tbody 
+            each cliente in clientes 
+                tr
+                    td=cliente.nombre
+                    td=cliente.apellidos
+                    td=cliente.direccion
+                    td=cliente.edad
+                    td=cliente.email
+                    td=cliente.sexo
+                    td=cliente.fecha_inscripcion
+                    td=cliente.cuota
+                    td=cliente.fecha_nacimiento
+                    td=cliente.dni
+                    td
+                        a.btn.btn-sm.btn-info.mt-2(href="/clientes/"+cliente.id) 👁
+                        a.btn.btn-sm.btn-success.mt-2(href="/clientes/edita/"+cliente.id) 🛠
+                        a.btn.btn-sm.btn-danger.mt-2(href="/clientes/borrar/"+cliente.id, onclick="return confirm('¿Estas seguro de eliminar este cliente?')") 🗑
+                       
+
+
+                    
+        

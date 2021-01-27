@@ -1,0 +1,45 @@
+extends ../layout.pug
+
+block content
+    h2 Formulario 🛠
+    p Edición de un nuevo cliente 🏓
+    form(method="POST", action="/clientes/update")
+        .form-group 
+            label Nombre
+            br
+            input.form-control(type="text", name="nombre", value=cliente.nombre)
+        
+        .form-group 
+            label Apellidos 
+            br
+            input.form-control(type="text", name="apellidos", value=cliente.apellidos)
+
+        .form-group 
+            label Dirrección
+            br  
+            input.form-control(type="text", name="direccion", value=cliente.direccion)
+
+        .form-group 
+            label Email 
+            br
+            input.form-control(type="text", name="email", value=cliente.email)
+            
+        .form-group 
+            label Edad 
+            br
+            input.form-control(type="text", name="edad", value=cliente.edad)
+
+        .form-group 
+            label Cuota
+            br
+            input.form-control(type="text", name="cuota", value=cliente.cuota)
+
+
+        .form-group 
+            label DNI
+            br
+            input.form-control(type="text", name="dni", value=cliente.dni)
+
+        input(type="hidden", name="clienteId", value=cliente.id)
+
+        input.btn.btn-danger.btn-block(type="submit", value="Guardar")
